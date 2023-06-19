@@ -1,0 +1,22 @@
+<form [formGroup]="educationForm" (ngSubmit)="onSubmit()">
+
+
+    <label for="bachelorsDegree">BachelorsDegree: </label>
+    <div class="form-group">
+        <input id="bachelorsDegree" type="text" formControlName="bachelorsDegree">
+    </div>
+    <label for="masters">Masters: </label>
+    <div class="form-group">
+        <input id="masters" type="text" formControlName="masters">
+    </div>
+    <label for="grade">Grade: </label>
+    <div class="form-group">
+        <input id="grade" type="text" formControlName="grade">
+    </div>
+
+
+  
+    <p>Complete the form to enable button.</p>
+    <button type="submit" [disabled]="!educationForm.valid">Next</button>
+
+</form>

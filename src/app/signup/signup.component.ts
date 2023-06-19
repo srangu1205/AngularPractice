@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl,FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -12,4 +13,13 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  singupForm1 = new FormGroup({
+    firstName: new FormControl(''),
+    lastName: new FormControl(''),
+  });
+
+  onSubmit() {
+    // TODO: Use EventEmitter with form value
+    console.warn(this.singupForm1.value);
+  }
 }

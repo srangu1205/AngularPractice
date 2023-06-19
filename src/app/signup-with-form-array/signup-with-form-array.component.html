@@ -1,0 +1,38 @@
+<form [formGroup]="singupForm2" (ngSubmit)="onSubmit()">
+
+
+    <label for="firstName">FirstName: </label>
+    <div class="form-group">
+        <input id="firstName" type="text" formControlName="firstName">
+    </div>
+    <label for="lastName">LastName: </label>
+    <div class="form-group">
+        <input id="lastName" type="text" formControlName="lastName">
+    </div>
+
+
+    <div formGroupName="address">
+        <h2>Address</h2>
+        <label for="street">Street: </label>
+        <div class="form-group">
+           <input id="street" type="text" formControlName="street">
+        </div>
+        <label for="city">City: </label>
+        <div class="form-group">
+            <input id="city" type="text" formControlName="city">
+        </div>
+        <label for="state">State: </label>
+        <div class="form-group">
+            <input id="state" type="text" formControlName="state">
+        </div>
+        <label for="zip">Zip Code: </label>
+        <div class="form-group">
+            <input id="zip" type="text" formControlName="zip">
+        </div>
+
+    </div>
+
+    <p>Complete the form to enable button.</p>
+    <button type="submit" [disabled]="!singupForm2.valid">Next</button>
+
+</form>

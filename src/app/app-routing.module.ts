@@ -9,6 +9,10 @@ const routes: Routes=[
   { path:'routesSection',component:RoutesSectionComponent},
 
   { path: 'signup', loadChildren: () => import('./signup/signup.module').then(m => m.SignupModule) },
+
+  { path: 'signupWithFormArray', loadChildren: () => import('./signup-with-form-array/signup-with-form-array.module').then(m => m.SignupWithFormArrayModule) },
+
+  { path: 'signupEducationDetails', loadChildren: () => import('./signup-education-details/signup-education-details.module').then(m => m.SignupEducationDetailsModule) },
   
 ];
 

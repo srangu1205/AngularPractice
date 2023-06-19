@@ -1,1 +1,17 @@
-<p>signup works!</p>
+<form [formGroup]="singupForm1" (ngSubmit)="onSubmit()">
+
+<label for="firstName">FirstName: </label>
+<input id="firstName" type="text" formControlName="firstName">
+
+<label for="lastName">LastName: </label>
+<input id="lastName" type="text" formControlName="lastName">
+
+<p>Complete the form to enable button.</p>
+<button type="submit" [disabled]="!singupForm1.valid">Submit</button>
+
+</form>
+
+
+
+
+<!-- <p>Value: {{ firstName.value }}</p> -->
